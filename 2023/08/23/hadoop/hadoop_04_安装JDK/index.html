@@ -2275,7 +2275,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697124855753),
+    lastupdate: new Date(1697128726315),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2946,6 +2946,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2023/10/12/a/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>a</p>
+          <p class='content'>aaa
+</p>
+        </a>
       
       
         <a class='next' href='/2023/08/23/hadoop/hadoop_03_%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/'>
@@ -4070,7 +4076,31 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         <script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js").then(function(n){n.onupdatefound=function(){var e=n.installing;e.onstatechange=function(){switch(e.state){case"installed":navigator.serviceWorker.controller?console.log("Updated serviceWorker."):console.log("serviceWorker Sucess!");break;case"redundant":console.log("The installing service worker became redundant.")}}}}).catch(function(e){console.log("Error during service worker registration:",e)}); </script>
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    
+    <script> 
+    volantis.rightmenu.jump = (type) => { 
+      const selector = type === 'prev' ? 'article .prev-next a.prev' : 'article .prev-next a.next';
+      const item = document.querySelector(selector); 
+      if(!!item) { 
+        if(typeof pjax !== 'undefined') { 
+          pjax.loadUrl(item.href) 
+        } else { 
+          window.location.href = item.href; 
+        } 
+      } 
+    } 
+   
+    volantis.rightmenu.handle(() => { 
+      const prev = document.querySelector('#prev').parentElement, 
+        next = document.querySelector('#next').parentElement, 
+        articlePrev = document.querySelector('article .prev-next a.prev p.title'), 
+        articleNext = document.querySelector('article .prev-next a.next p.title'); 
+   
+      prev.style.display = articlePrev ? 'block' : 'none'; 
+      prev.title = articlePrev ? articlePrev.innerText : null; 
+      next.style.display = articleNext ? 'block' : 'none'; 
+      next.title = articleNext ? articleNext.innerText : null; 
+    }, 'prevNext', false) 
+  </script> 
     <!-- Custom Files bodyEnd end-->
   </body>
 </html>
