@@ -11,3 +11,7 @@
     align-items: center;
     text-align: center;
 }
+
+.footer-inner {
+    background-color: transparent;
+}
