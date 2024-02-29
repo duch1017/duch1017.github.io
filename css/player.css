@@ -1,0 +1,13 @@
+#player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#player>meting-js {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

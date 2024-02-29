@@ -16,13 +16,15 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="duch">
-  <meta name="keywords" content="git">
+  <meta name="keywords" content="计算机,大学生,笔记">
   
     <meta name="description" content="git基础命令">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
+  
+    <!-- require APlayer --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"> <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script> <!-- require MetingJS --> <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
   
   <title>git - duch</title>
 
@@ -58,11 +60,15 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/player.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"duch1017.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"duch1017.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -190,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="git命令"></span>
+            <span id="subtitle" data-typed-text="git"></span>
           
         </div>
 
@@ -276,7 +282,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">git命令</h1>
+            <h1 id="seo-header">git</h1>
             
             
               <div class="markdown-body">
@@ -332,22 +338,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AF%AD%E6%B3%95/" class="category-chain-item">语法</a>
+  <a href="/categories/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" class="category-chain-item">基础命令</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%AF%AD%E6%B3%95/%E5%9F%BA%E7%A1%80/" class="category-chain-item">基础</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E8%AF%AD%E6%B3%95/%E5%9F%BA%E7%A1%80/git/" class="category-chain-item">git</a>
-  
-  
-
-  
-
   
 
       </span>
@@ -422,8 +414,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/29/hello-world/" title="语法">
-                        <span class="hidden-mobile">语法</span>
+                      <a href="/2024/02/29/markdowd/" title="markdown">
+                        <span class="hidden-mobile">markdown</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -436,7 +428,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
     <div id="giscus" class="giscus"></div>
     <script type="text/javascript">
@@ -570,7 +562,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+      <div id="player"> <meting-js server="netease" type="playlist" list_max_heigh="320px" volume=0.7 id="8264742285" theme="transparent" mini="true"></meting-js> </div>
     </div>
   
   
@@ -643,7 +635,9 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
   
 
 
