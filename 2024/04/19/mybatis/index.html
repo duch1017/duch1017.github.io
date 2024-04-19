@@ -18,13 +18,13 @@
   <meta name="author" content="duch">
   <meta name="keywords" content="计算机,大学生,笔记">
   
-    <meta name="description" content="大学牲学习笔记">
+    <meta name="description" content="mybatis">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>关于 - duch</title>
+  <title>mybatis-条件查询 - duch</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -88,7 +88,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -188,15 +188,70 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/duch/bj.jpeg') no-repeat center center; background-size: cover;">
+     style="background: url('https://cdn.pixabay.com/photo/2021/01/05/13/45/blue-5891198_1280.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于"></span>
+            <span id="subtitle" data-typed-text="mybatis-条件查询"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        duch
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-19 14:00" pubdate>
+          周五, 2024-04-19, 14:00
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          226 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
 
         
       </div>
@@ -212,100 +267,101 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/duch/touxiang.jpg" class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">duch</div>
-    <div class="about-intro">在校牛马大学牲</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://gitee.com/duch1017 class="
-           hint--bottom hint--rounded"
-           aria-label=Gitee
-           target="_blank"
-        >
-          <i class="iconfont icon-gitee-fill" aria-hidden="true"></i>
-          
-        </a>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">mybatis-条件查询</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Data</span><br><span class="hljs-meta">@NoArgsConstructor</span><br><span class="hljs-meta">@AllArgsConstructor</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Emp</span> &#123;<br>    <span class="hljs-keyword">private</span> Integer id;<br>    <span class="hljs-keyword">private</span> String username;<br>    <span class="hljs-keyword">private</span> String password;<br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">short</span> gender;<br>    <span class="hljs-keyword">private</span> String image;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">short</span> job;<br>    <span class="hljs-keyword">private</span> LocalDate entrydate;<br>    <span class="hljs-keyword">private</span> Integer deptId;<br>    <span class="hljs-keyword">private</span> LocalDateTime createTime;<br>    <span class="hljs-keyword">private</span> LocalDateTime updateTime;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Mapper</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">EmpMapper</span> &#123;<br>    <span class="hljs-meta">@Select(&quot;select * from emp where name like concat(&#x27;%&#x27;,#&#123;name&#125;,&#x27;%&#x27;) and gender = #&#123;gender&#125; and entrydate between #&#123;begin&#125; and #&#123;end&#125; order by update_time desc;&quot;)</span><br>    List&lt;Emp&gt; <span class="hljs-title function_">list</span><span class="hljs-params">(<span class="hljs-meta">@Param(&quot;name&quot;)</span> String name, <span class="hljs-meta">@Param(&quot;gender&quot;)</span> Short gender, <span class="hljs-meta">@Param(&quot;begin&quot;)</span> LocalDate begin, <span class="hljs-meta">@Param(&quot;end&quot;)</span> LocalDate end)</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootTest</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SpringbootMybatisCrudApplicationTests</span> &#123;<br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testList</span><span class="hljs-params">()</span> &#123;<br>        List&lt;Emp&gt; empList= empMapper.list(<span class="hljs-string">&quot;张&quot;</span>, (<span class="hljs-type">short</span>) <span class="hljs-number">1</span>, LocalDate.of(<span class="hljs-number">2000</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>), LocalDate.of(<span class="hljs-number">2020</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>));<br>        System.out.println(empList);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>在执行testList()时，会报一个错为：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">org<span class="hljs-selector-class">.mybatis</span><span class="hljs-selector-class">.spring</span><span class="hljs-selector-class">.MyBatisSystemException</span>: nested exception is org<span class="hljs-selector-class">.apache</span><span class="hljs-selector-class">.ibatis</span><span class="hljs-selector-class">.binding</span><span class="hljs-selector-class">.BindingException</span>: Parameter <span class="hljs-string">&#x27;name&#x27;</span> not found. Available parameters are <span class="hljs-selector-attr">[arg3, arg2, arg1, arg0, param3, param4, param1, param2]</span><br></code></pre></td></tr></table></figure>
+<p>最终才知道原来是在spring boot 1.x的版本中或者是单独使用mybatis时需要使用@Param指定获取的参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Mapper</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">EmpMapper</span> &#123;<br>    <span class="hljs-meta">@Select(&quot;select * from emp where name like concat(&#x27;%&#x27;,#&#123;name&#125;,&#x27;%&#x27;) and gender = #&#123;gender&#125; and entrydate between #&#123;begin&#125; and #&#123;end&#125; order by update_time desc;&quot;)</span><br>    List&lt;Emp&gt; <span class="hljs-title function_">list</span><span class="hljs-params">(<span class="hljs-meta">@Param(&quot;name&quot;)</span> String name, <span class="hljs-meta">@Param(&quot;gender&quot;)</span> Short gender, <span class="hljs-meta">@Param(&quot;begin&quot;)</span> LocalDate begin, <span class="hljs-meta">@Param(&quot;end&quot;)</span> LocalDate end)</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-        
-        
-        
-        <a href=https://github.com/duch1017/ class="
-           hint--bottom hint--rounded"
-           aria-label=GitHub
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+        <a href="/tags/mabatis/" class="print-no-link">#mabatis</a>
       
-        
-        
-        
-        <a href=https://space.bilibili.com/364489769?spm_id_from=333.1007.0.0 class="
-           hint--bottom hint--rounded"
-           aria-label=哔哩哔哩
-           target="_blank"
-        >
-          <i class="iconfont icon-bilibili" aria-hidden="true"></i>
-          
-        </a>
+    </div>
+  
+</div>
+
+
+              
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/03/05/mysql/" title="mysql">
+                        <span class="hidden-mobile">mysql</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://weibo.com/u/5505377805 class="
-           hint--bottom hint--rounded"
-           aria-label=微博
-           target="_blank"
-        >
-          <i class="iconfont icon-weibo-fill" aria-hidden="true"></i>
-          
-        </a>
-      
-        
-        
-        
-        <a  class="qr-trigger
-           "
-           
-           target="_self"
-        >
-          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
-          
-            <img class="qr-img" src="/img/duch/weixin.png" alt="qrcode" />
-          
-        </a>
-      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    <p>这家伙很懒，什么也没写！！！</p>
-
-  </div>
-
-  
-</article>
-
 
 
 
@@ -332,11 +388,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -451,6 +504,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
